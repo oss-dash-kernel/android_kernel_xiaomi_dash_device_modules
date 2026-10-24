@@ -17048,7 +17048,7 @@ connsys_emi_config_hyp: connsys-emi-config-hyp {
 	};
 
 	mtdoops_pmsg@aec00000  {
-	compatible = "xiaomi,mtdoops_pmsg";
+	compatible = "ramoops";
 	reg = <0 0xaec00000 0 0x410000>;
 	console-size = <0x200000>;
 	pmsg-size = <0x200000>;
