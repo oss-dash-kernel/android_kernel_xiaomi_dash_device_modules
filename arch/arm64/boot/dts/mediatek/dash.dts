@@ -4053,3 +4053,4 @@ bootargs_ext_fac = "cpufreq.default_governor=conservative \
 	};
 
 #include "mediatek/xiaomi_dash_mt6991_mitee.dtsi"
+#include "mediatek/dash-align.dtsi"
