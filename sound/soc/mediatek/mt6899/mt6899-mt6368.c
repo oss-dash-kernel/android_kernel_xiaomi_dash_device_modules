@@ -2460,4 +2460,4 @@ module_platform_driver(mt6899_mt6368_driver);
 MODULE_DESCRIPTION("MT6899 mt6368 ALSA SoC machine driver");
 MODULE_AUTHOR("Shane Chien <shane.chien@mediatek.com>");
 MODULE_LICENSE("GPL");
-MODULE_ALIAS("mt6899 mt6368 soc card");
+MODULE_ALIAS("soc:mt6899-mt6368");

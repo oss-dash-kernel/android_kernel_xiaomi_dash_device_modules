@@ -18,10 +18,10 @@ obj-$(CONFIG_MTK_IPI) += mtk_tinysys_ipi.o
 obj-$(CONFIG_MTK_MBOX) += mtk-mbox.o
 obj-$(CONFIG_DEVICE_MODULES_MTK_PMIC_WRAP) += mtk-pmic-wrap.o
 obj-$(CONFIG_DEVICE_MODULES_MTK_SCPSYS) += mtk-scpsys.o mtk-pm-domain-disable-unused.o
-ifneq ($(filter m,$(CONFIG_DEVICE_MODULES_MTK_SCPSYS)),)
-obj-$(CONFIG_DEVICE_MODULES_MTK_SCPSYS) += scpsys-dummy.o
-scpsys-dummy-$(CONFIG_DEVICE_MODULES_MTK_SCPSYS) += mtk-scpsys-dummy.o
-endif
+# scpsys-dummy only exists for platforms without a real SCPSYS driver. It
+# exports the same init_scp/register_scpsys_notifier symbols as
+# mtk-scpsys, and loading both aborts every dependent module with a
+# duplicate-export error. MT6991 has mtk-scpsys, so do not build it.
 ifneq ($(wildcard $(srctree)/$(src)/mtk-scpsys-mt6768.c),)
 obj-$(CONFIG_DEVICE_MODULES_MTK_SCPSYS) += mtk-scpsys-mt6768.o mtk-scpsys-bringup.o
 endif

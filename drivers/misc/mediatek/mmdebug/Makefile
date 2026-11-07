@@ -15,5 +15,10 @@ ccflags-y += -I$(DEVICE_MODULES_PATH)/drivers/misc/mediatek/include/mt-plat/
 ccflags-y += -I$(DEVICE_MODULES_PATH)/drivers/misc/mediatek/mmdebug/
 ccflags-y += -I$(DEVICE_MODULES_PATH)/drivers/misc/mediatek/vcp/include/
 ccflags-y += -I$(DEVICE_MODULES_PATH)/drivers/misc/mediatek/vcp/rv/
-obj-$(CONFIG_MTK_MMDEBUG) += mtk-mmdebug-vcp.o mtk-mmdebug-vcp-stub.o
+# The stub exports the same mmdebug_is_init_done symbol as the real VCP
+# driver. Building both lets depmod pick the stub as the provider, and
+# loading it next to the real driver fails with a duplicate-export error
+# that aborts every dependent module. MT6991 has VCP, keep only the real
+# driver.
+obj-$(CONFIG_MTK_MMDEBUG) += mtk-mmdebug-vcp.o
 

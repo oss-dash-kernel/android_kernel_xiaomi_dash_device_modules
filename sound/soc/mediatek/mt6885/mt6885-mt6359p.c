@@ -1573,4 +1573,4 @@ module_platform_driver(mt6885_mt6359p_driver);
 MODULE_DESCRIPTION("MT6885 MT6359p ALSA SoC machine driver");
 MODULE_AUTHOR("Shane Chien <shane.chien@mediatek.com>");
 MODULE_LICENSE("GPL v2");
-MODULE_ALIAS("mt6885 mt6359p soc card");
+MODULE_ALIAS("soc:mt6885-mt6359p");

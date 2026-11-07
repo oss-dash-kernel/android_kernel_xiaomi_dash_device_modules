@@ -2782,4 +2782,4 @@ module_platform_driver(mt6991_mt6681_driver);
 MODULE_DESCRIPTION("MT6991 mt6681 ALSA SoC machine driver");
 MODULE_AUTHOR("Shane Chien <shane.chien@mediatek.com>");
 MODULE_LICENSE("GPL");
-MODULE_ALIAS("mt6991 mt6681 soc card");
+MODULE_ALIAS("soc:mt6991-mt6681");

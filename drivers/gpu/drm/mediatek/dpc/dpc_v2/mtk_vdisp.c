@@ -970,5 +970,5 @@ late_initcall(mtk_vdisp_init);
 module_exit(mtk_vdisp_exit);
 MODULE_AUTHOR("William Yang <William-tw.Yang@mediatek.com>");
 MODULE_DESCRIPTION("MTK VDISP driver V2.0");
-MODULE_SOFTDEP("post:mediatek-drm");
+MODULE_SOFTDEP("post: mediatek-drm");
 MODULE_LICENSE("GPL");

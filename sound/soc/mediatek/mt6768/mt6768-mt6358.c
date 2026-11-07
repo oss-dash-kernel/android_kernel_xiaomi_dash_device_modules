@@ -1100,4 +1100,4 @@ module_platform_driver(mt6768_mt6358_driver);
 MODULE_DESCRIPTION("MT6768 MT6358 ALSA SoC machine driver");
 MODULE_AUTHOR("Gang Feng <gang.feng@mediatek.com>");
 MODULE_LICENSE("GPL v2");
-MODULE_ALIAS("mt6768 mt6358 soc card");
+MODULE_ALIAS("soc:mt6768-mt6358");

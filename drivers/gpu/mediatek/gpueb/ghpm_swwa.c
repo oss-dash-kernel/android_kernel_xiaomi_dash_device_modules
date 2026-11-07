@@ -79,8 +79,7 @@ static unsigned long g_pwr_irq_flags;
 static raw_spinlock_t ghpm_lock;
 static bool first_on_after_bootup;
 
-unsigned int g_ghpm_ready;
-EXPORT_SYMBOL(g_ghpm_ready);
+extern unsigned int g_ghpm_ready;
 
 static struct ghpm_platform_fp platform_ghpmswwa_fp = {
 	.ghpm_ctrl = __ghpm_swwa_ctrl,

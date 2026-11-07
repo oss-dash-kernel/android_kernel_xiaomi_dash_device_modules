@@ -18,14 +18,12 @@ void mdp_dpc_register(const struct dpc_funcs *funcs, enum mtk_dpc_version versio
 }
 EXPORT_SYMBOL_GPL(mdp_dpc_register);
 
-void mdp_set_resource_callback(enum cmdq_event res_event,
-	CmdqResourceAvailableCB res_available,
-	CmdqResourceReleaseCB res_release)
-{
-	cmdqMdpSetResourceCallback(res_event, res_available, res_release);
-}
-EXPORT_SYMBOL(mdp_set_resource_callback);
-
+/*
+ * mdp_set_resource_callback is exported by cmdq_helper_inf. Do not export
+ * it here: the duplicate export makes this module fail to load, which in
+ * turn aborts every module whose dependency chain includes it (including
+ * the thermal/ged/mali display chain).
+ */
 MODULE_DESCRIPTION("MTK MDP DRV_DUMMY");
 MODULE_AUTHOR("Iris-sc Yang <iris-sc.yang@mediatek.com>");
 MODULE_LICENSE("GPL");

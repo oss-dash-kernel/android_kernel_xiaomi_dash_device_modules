@@ -128,6 +128,5 @@ obj-y += ../$(DEVICE_MODULES_REL_DIR)/drivers/firmware/cirrus/
 
 obj-y += ../$(DEVICE_MODULES_REL_DIR)/drivers/staging/mi-perf/
 
-obj-y += ../$(DEVICE_MODULES_REL_DIR)/mm/
 
 endif

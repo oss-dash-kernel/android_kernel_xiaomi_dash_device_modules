@@ -623,7 +623,7 @@ static void __exit platform_cm_mgr_exit(void)
 subsys_initcall(platform_cm_mgr_init);
 module_exit(platform_cm_mgr_exit);
 
-MODULE_SOFTDEP("pre: thermal_interface.ko");
+MODULE_SOFTDEP("pre: thermal_interface");
 MODULE_DESCRIPTION("Mediatek cm_mgr driver");
 MODULE_AUTHOR("Carlos Hung<carlos.hung@mediatek.com>");
 MODULE_LICENSE("GPL");

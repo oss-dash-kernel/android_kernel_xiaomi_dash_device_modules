@@ -124,6 +124,5 @@ obj-y += drivers/staging/binder_prio/
 
 obj-y += drivers/firmware/cirrus/
 
-obj-y += mm/
 
 endif

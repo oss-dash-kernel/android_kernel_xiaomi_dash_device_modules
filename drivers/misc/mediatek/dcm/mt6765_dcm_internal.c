@@ -432,7 +432,7 @@ static void __exit mt6765_dcm_exit(void)
 {
 }
 
-MODULE_SOFTDEP("pre:mtk_dcm.ko");
+MODULE_SOFTDEP("pre: mtk_dcm");
 module_init(mt6765_dcm_init);
 module_exit(mt6765_dcm_exit);
 

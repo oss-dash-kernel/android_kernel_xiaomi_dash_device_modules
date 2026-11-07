@@ -1232,4 +1232,4 @@ module_platform_driver(mt6833_mt6359_driver);
 MODULE_DESCRIPTION("MT6833 MT6359 ALSA SoC machine driver");
 MODULE_AUTHOR("Yujie Xiao <yujie.xiao@mediatek.com>");
 MODULE_LICENSE("GPL");
-MODULE_ALIAS("mt6833 mt6359 soc card");
+MODULE_ALIAS("soc:mt6833-mt6359");

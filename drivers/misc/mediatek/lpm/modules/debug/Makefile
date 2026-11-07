@@ -1,5 +1,7 @@
 # common KOs
-obj-$(CONFIG_MTK_LOW_POWER_MODULE) += v1/
+# MT6991 uses the v2 LPM debug implementation (see mt6991/Makefile and
+# modules.load). v1 exports the same symbols and only serves as a decoy
+# provider that breaks the v2-dependent modules at load time.
 obj-$(CONFIG_MTK_LOW_POWER_MODULE) += v2/
 
 ifeq ($(CONFIG_MTK_LPM_MT6983),m)

@@ -1350,4 +1350,4 @@ module_platform_driver(mt6781_mt6366_driver);
 MODULE_DESCRIPTION("MT6781 MT6366 ALSA SoC machine driver");
 MODULE_AUTHOR("Patrick Cheng <Cheng-yi.Cheng@mediatek.com>");
 MODULE_LICENSE("GPL");
-MODULE_ALIAS("mt6781 mt6366 soc card");
+MODULE_ALIAS("soc:mt6781-mt6366");

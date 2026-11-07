@@ -1519,4 +1519,4 @@ module_platform_driver(mt6877_mt6359_driver);
 MODULE_DESCRIPTION("MT6877 MT6359 ALSA SoC machine driver");
 MODULE_AUTHOR("Eason Yen <eason.yen@mediatek.com>");
 MODULE_LICENSE("GPL");
-MODULE_ALIAS("mt6877 mt6359 soc card");
+MODULE_ALIAS("soc:mt6877-mt6359");

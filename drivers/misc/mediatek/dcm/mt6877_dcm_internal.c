@@ -310,7 +310,7 @@ static int __init mt6877_dcm_init(void)
 static void __exit mt6877_dcm_exit(void)
 {
 }
-MODULE_SOFTDEP("pre:mtk_dcm.ko");
+MODULE_SOFTDEP("pre: mtk_dcm");
 module_init(mt6877_dcm_init);
 module_exit(mt6877_dcm_exit);
 
