@@ -80,17 +80,10 @@ endif # !CONFIG_MTK_GMO_RAM_OPTIMIZE
 
 obj-$(CONFIG_MTK_MDP) += cmdq_helper_inf.o
 obj-$(CONFIG_MTK_MDP_DUMMY) += mdp_drv_dummy.o
-ifeq ($(CONFIG_MTK_MDP), y)
-obj-$(CONFIG_MTK_MDP_MT6768) += mdp_drv_mt6768.o
-obj-$(CONFIG_MTK_MDP_MT6761) += mdp_drv_mt6761.o
-obj-$(CONFIG_MTK_MDP_MT6765) += mdp_drv_mt6765.o
-else
-# MT6991 is the only SoC this tree builds for. The other per-SoC MDP
-# drivers export the same mdp_dpc_register symbol set and are not used.
-ifneq ($(wildcard $(srctree)/$(src)/mdp_mt6991.c),)
-obj-$(CONFIG_MTK_MDP) += mdp_drv_mt6991.o
-endif
-endif
+# MT6991 is the only SoC this tree builds for. Select its driver
+# explicitly; the other per-SoC variants export the same
+# mdp_dpc_register symbol set and are not used.
+obj-$(CONFIG_MTK_MDP_MT6991) += mdp_drv_mt6991.o
 
 mdp_drv_mt6771-objs := mdp_mt6771.o\
 	mdp_driver.o \
